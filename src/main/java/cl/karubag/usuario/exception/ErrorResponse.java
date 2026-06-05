@@ -23,7 +23,7 @@ this.message = message;
 this.path = path;
 }
 
-// ===== Getters y Setters =====
+
 
 public LocalDateTime getTimestamp() {
 return timestamp;

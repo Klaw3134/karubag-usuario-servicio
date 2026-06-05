@@ -2,12 +2,6 @@ package cl.karubag.usuario.dto;
 
 import cl.karubag.usuario.model.Rol;
 
-/**
-* DTO de entrada para crear un nuevo usuario.
-*
-* Representa los datos que el cliente envía al endpoint POST /api/v1/usuarios.
-* NO incluye id, fechas ni activo (esos los maneja el sistema).
-*/
 public class UsuarioCreateRequest {
 
 private String email;
@@ -16,7 +10,7 @@ private String nombreCompleto;
 private String telefono;
 private Rol rol;
 
-// ===== Constructores =====
+
 
 public UsuarioCreateRequest() {
 }
@@ -29,7 +23,6 @@ this.telefono = telefono;
 this.rol = rol;
 }
 
-// ===== Getters y Setters =====
 
 public String getEmail() {
 return email;

@@ -1,11 +1,6 @@
 package cl.karubag.usuario.dto;
 
-/**
-* DTO simple para responder consultas de existencia.
-*
-* Se usa cuando otros microservicios (como cliente-servicio) preguntan:
-* "¿existe el usuario con id 5?" → respuesta: { "exists": true }
-*/
+
 public class ExistsResponse {
 
 private boolean exists;

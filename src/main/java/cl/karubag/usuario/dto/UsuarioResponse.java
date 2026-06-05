@@ -3,12 +3,6 @@ package cl.karubag.usuario.dto;
 import cl.karubag.usuario.model.Rol;
 import java.time.LocalDateTime;
 
-/**
-* DTO de salida para devolver datos de un usuario.
-*
-* Es lo que el cliente recibe en respuestas HTTP.
-* IMPORTANTE: NO incluye passwordHash por seguridad.
-*/
 public class UsuarioResponse {
 
 private Long id;
@@ -20,7 +14,6 @@ private Boolean activo;
 private LocalDateTime creadoEn;
 private LocalDateTime actualizadoEn;
 
-// ===== Constructores =====
 
 public UsuarioResponse() {
 }
@@ -37,7 +30,6 @@ this.creadoEn = creadoEn;
 this.actualizadoEn = actualizadoEn;
 }
 
-// ===== Getters y Setters =====
 
 public Long getId() {
 return id;

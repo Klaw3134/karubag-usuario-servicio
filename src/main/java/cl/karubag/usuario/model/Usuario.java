@@ -13,12 +13,6 @@ import jakarta.persistence.Table;
 
 import java.time.LocalDateTime;
 
-/**
-* Entidad Usuario - representa una cuenta del sistema Karubag.
-*
-* Esta clase define la estructura de la tabla "usuario" en la BD.
-* Hibernate la crea automáticamente al arrancar la app (code-first).
-*/
 @Entity
 @Table(name = "usuario")
 public class Usuario {
@@ -52,8 +46,6 @@ private LocalDateTime creadoEn;
 @Column(name = "actualizado_en", nullable = false)
 private LocalDateTime actualizadoEn;
 
-// ===== Callbacks de ciclo de vida =====
-// Se ejecutan automáticamente antes de guardar/actualizar en BD
 
 @PrePersist
 protected void onCreate() {
@@ -66,10 +58,9 @@ protected void onUpdate() {
 this.actualizadoEn = LocalDateTime.now();
 }
 
-// ===== Constructores =====
+
 
 public Usuario() {
-// JPA requiere constructor vacío sin argumentos
 }
 
 public Usuario(String email, String passwordHash, String nombreCompleto, String telefono, Rol rol) {
@@ -81,7 +72,7 @@ this.rol = rol;
 this.activo = true;
 }
 
-// ===== Getters y Setters =====
+
 
 public Long getId() {
 return id;

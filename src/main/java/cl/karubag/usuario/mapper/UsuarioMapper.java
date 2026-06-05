@@ -5,11 +5,7 @@ import cl.karubag.usuario.dto.UsuarioResponse;
 import cl.karubag.usuario.model.Usuario;
 import org.springframework.stereotype.Component;
 
-/**
-* Mapper que convierte entre DTOs y la entidad Usuario.
-*
-* Centraliza la lógica de conversión para no duplicarla en el Service.
-*/
+
 @Component
 public class UsuarioMapper {
 
@@ -25,11 +21,7 @@ public class UsuarioMapper {
         return usuario;
     }
 
-/**
-* Convierte una entidad Usuario en un DTO de respuesta.
-*
-* IMPORTANTE: NO incluye el passwordHash en la respuesta (seguridad).
-*/
+
     public UsuarioResponse toResponse(Usuario usuario) {
         return new UsuarioResponse(
         usuario.getId(),
@@ -43,12 +35,8 @@ public class UsuarioMapper {
         );
     }
 
-/**
-* Hash simple del password.
-* NOTA: para producción se debe usar BCrypt. Esto es solo demostrativo.
-*/
+
     private String hashPassword(String password) {
-// Hash básico para fines académicos (NO usar en producción real)
     return "HASH_" + password.hashCode();
     }
 }
