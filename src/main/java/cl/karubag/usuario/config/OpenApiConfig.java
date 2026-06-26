@@ -11,6 +11,6 @@ public class OpenApiConfig {
                 .info(new Info()
                         .title("Usuario Servicio API")
                         .version("1.0")
-                        .description("API de gestión de usuarios Karübag"));
+                        .description("API de gestion de usuarios Karübag"));
     }
 }

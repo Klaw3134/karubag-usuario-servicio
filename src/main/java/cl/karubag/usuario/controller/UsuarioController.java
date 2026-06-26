@@ -16,7 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
-@Tag(name = "Usuarios", description = "Gestión de usuarios Karübag")
+@Tag(name = "Usuarios", description = "Gestion de usuarios Karübag")
 @RestController
 @RequestMapping("/api/v1/usuarios")
 public class UsuarioController {
@@ -86,7 +86,7 @@ public class UsuarioController {
     }
 
     @Operation(summary = "Verificar existencia", description = "Verifica si un usuario existe — usado por WebClient de otros servicios")
-    @ApiResponse(responseCode = "200", description = "Resultado de verificación")
+    @ApiResponse(responseCode = "200", description = "Resultado de verificacion")
     @GetMapping("/{id}/exists")
     public ResponseEntity<ExistsResponse> existePorId(@PathVariable Long id) {
         boolean existe = usuarioService.existePorId(id);
